@@ -8,30 +8,7 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'site',
   resolve: {
-    includes: ['docs', 'packages/hooks/src']
-  },
-  navs: [
-    {
-      title: 'Hooks',
-      path: '/hooks',
-    }
-  ],
-  menus: {
-    "/hooks": [
-      {
-        title: "lifeCycle",
-        children: [
-          "useMount",
-          "useUnMount"
-        ]
-      },
-      {
-        title: "utils",
-        children: [
-          "useLatestRef",
-        ]
-      }
-    ]
+
   }
   // more config: https://d.umijs.org/config
 });

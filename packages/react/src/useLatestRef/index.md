@@ -1,7 +1,7 @@
 ---
 nav: 
     title: useLatestRef
-    path: /hooks
+    path: /react
 ---
 
 # useLatestRef

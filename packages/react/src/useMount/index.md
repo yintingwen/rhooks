@@ -1,7 +1,7 @@
 ---
 nav:
     title: useMount
-    path: /hooks
+    path: /react
 ---
 
 # useMount
