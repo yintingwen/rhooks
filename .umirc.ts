@@ -1,4 +1,7 @@
 import { defineConfig } from 'dumi';
+import unpluginDts from './plugins/tt'
+import WebpackChain from 'webpack-chain';
+
 
 export default defineConfig({
   title: 'rhooks',
@@ -9,6 +12,17 @@ export default defineConfig({
   mode: 'site',
   resolve: {
 
+  },
+  chainWebpack(memo: WebpackChain) {
+    memo.plugin('dts').use(unpluginDts.webpack({}))
+    // memo.module
+    //   .rule('dts')
+    //   .test(/.*\.md$/)
+    //   .include
+    //     .add(/package.*\.md/)
+    //     .end()
+    //   .use('dts')
+    //     .loader(require.resolve('./plugins/loader.js')).end()
   }
   // more config: https://d.umijs.org/config
 });

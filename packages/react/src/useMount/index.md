@@ -5,4 +5,10 @@ nav:
 ---
 
 # useMount
-123
+
+``` typescript
+function useMount(fn: () => void): void;
+```
+
+::: dts :::
+
