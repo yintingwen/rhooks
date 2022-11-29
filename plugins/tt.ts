@@ -1,18 +1,31 @@
 import * as ts from "typescript";
 import { createUnplugin, UnpluginContextMeta } from "unplugin";
-import * as fs from "fs";
+import { Compiler } from 'webpack';
+import * as path from "path";
 
+let log = true
 const plugin = createUnplugin((options: Record<string, string>, meta: UnpluginContextMeta) => {
   return {
     name: 'unplugin-dts',
-    load (id) {
-      if (/package.*\.md/.test(id)) {
-        console.log('load hooks', id)
-        return {
-          code: fs.readFileSync(id, 'utf-8')
+    webpack(compiler: Compiler) {
+      console.log('？', compiler.options.module.rules.push(
+        {
+          loader: path.resolve('./plugins/loader.js'),
+          options: [Object]
         }
-      }
-      return null
+
+      ))
+      // compiler.hooks.normalModuleFactory.tap(
+      //   'unplugin-dts',
+      //   (normalModuleFactory) => {
+      //     normalModuleFactory.hooks.resolve.tap('unplugin-dts', (resolveData) => {
+      //       // resolveData.request.endsWith('.md') && console.log(resolveData)
+      //     })
+      //     normalModuleFactory.hooks.createParser.for('javascript/auto').tap('unplugin-dts', (parser) => {
+      //       console.log(parser)
+      //     })
+      //   }
+      // )
     }
   }
 })

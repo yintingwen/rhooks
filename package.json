@@ -35,6 +35,7 @@
     "@types/jest": "^27.0.3",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
+    "@types/webpack": "^5.28.0",
     "@types/webpack-chain": "^5.2.0",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
@@ -46,7 +47,8 @@
     "react": "^18.0.0",
     "tsx": "^3.12.1",
     "typescript": "^4.9.3",
-    "yorkie": "^2.0.0",
-    "unplugin": "^1.0.0"
+    "unplugin": "^1.0.0",
+    "webpack": "4.46.0",
+    "yorkie": "^2.0.0"
   }
 }

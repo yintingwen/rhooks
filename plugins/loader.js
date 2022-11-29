@@ -10,7 +10,7 @@ module.exports = function (source, options) {
       emitDeclarationOnly: true,
     })
     const dts = clearDts(createdFiles[sourceFile])
-    source = source.replace(/:::[\s|\S]?dts[\s|\S]?:::/, '``` typescript\n' + dts.trim() + '\n```')
+    return source.replace(/:::[\s|\S]?dts[\s|\S]?:::/, '``` typescript\n' + dts.trim() + '\n```')
   }
 
   return source
