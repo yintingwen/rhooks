@@ -1,14 +1,17 @@
 ---
 nav:
-    title: useMount
-    path: /react
+  title: useMount
+  path: /react
 ---
 
 # useMount
 
-``` typescript
-function useMount(fn: () => void): void;
+react 组件挂载 hook
+
+```typescript
+console.log(123);
 ```
 
-::: dts :::
+## Type Declarations
 
+::: dts :::

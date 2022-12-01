@@ -1,33 +1,40 @@
-# rhooks
+# rhook
 
-## Getting Started
+[![NPM version](https://img.shields.io/npm/v/rhook.svg?style=flat)](https://npmjs.org/package/rhook)
+[![NPM downloads](http://img.shields.io/npm/dm/rhook.svg?style=flat)](https://npmjs.org/package/rhook)
 
-Install dependencies,
+react hooks
 
-```bash
-$ npm i
-```
+## Usage
 
-Start the dev server,
+TODO
 
-```bash
-$ npm start
-```
+## Options
 
-Build documentation,
+TODO
 
-```bash
-$ npm run docs:build
-```
-
-Run test,
+## Development
 
 ```bash
-$ npm test
+# install dependencies
+$ pnpm install
+
+# develop library by docs demo
+$ pnpm start
+
+# build library source code
+$ pnpm run build
+
+# build library source code in watch mode
+$ pnpm run build:watch
+
+# build docs
+$ pnpm run docs:build
+
+# check your project for potential problems
+$ pnpm run doctor
 ```
 
-Build library via `father`,
+## LICENSE
 
-```bash
-$ npm run build
-```
+MIT

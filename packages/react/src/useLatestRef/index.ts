@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 
-function useLatestRef <T>(value: T) {
+function useLatestRef<T>(value: T) {
   const ref = useRef(value);
   ref.current = value;
   return ref;
